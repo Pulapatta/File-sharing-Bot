@@ -26,7 +26,6 @@ async def channel_post(client: Client, message: Message):
     base64_string = await encode(string)
     
     await reply_text.edit(f"<b>Here is your link</b>\n\n{link}", reply_markup=reply_markup, disable_web_page_preview = True)
-
     if not DISABLE_CHANNEL_BUTTON:
         await post_message.edit_reply_markup(reply_markup)
 
